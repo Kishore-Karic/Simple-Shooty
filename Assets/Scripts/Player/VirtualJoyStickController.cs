@@ -7,7 +7,7 @@ namespace SimpleShooty.Player
     public class VirtualJoyStickController : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler
     {
         [SerializeField] private Image joyStickBGImg, joyStickImg;
-        [SerializeField] private float one, three;
+        [SerializeField] private float one, three, speedNormalizer, positionNormalizer;
 
         private Vector2 joyStickInput;
 
@@ -17,8 +17,8 @@ namespace SimpleShooty.Player
                 joyStickBGImg.rectTransform, eventData.position,
                 eventData.pressEventCamera, out joyStickInput))
             {
-                joyStickInput.x = joyStickInput.x / joyStickBGImg.rectTransform.sizeDelta.x;
-                joyStickInput.y = joyStickInput.y / joyStickBGImg.rectTransform.sizeDelta.y;
+                joyStickInput.x = (joyStickInput.x / joyStickBGImg.rectTransform.sizeDelta.x) * speedNormalizer;
+                joyStickInput.y = (joyStickInput.y / joyStickBGImg.rectTransform.sizeDelta.y) * speedNormalizer;
 
                 if(joyStickInput.magnitude > one)
                 {
@@ -26,8 +26,8 @@ namespace SimpleShooty.Player
                 }
 
                 joyStickImg.rectTransform.anchoredPosition = new Vector2(
-                    joyStickInput.x * (joyStickBGImg.rectTransform.sizeDelta.x / three),
-                    joyStickInput.y * (joyStickBGImg.rectTransform.sizeDelta.y / three));
+                    joyStickInput.x * (joyStickBGImg.rectTransform.sizeDelta.x / positionNormalizer),
+                    joyStickInput.y * (joyStickBGImg.rectTransform.sizeDelta.y / positionNormalizer));
             }
         }
 
