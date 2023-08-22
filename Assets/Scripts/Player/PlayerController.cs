@@ -9,7 +9,7 @@ namespace SimpleShooty.Player
     {
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody rigidBody;
-        [SerializeField] private float movementSpeed, speedNormalizer, cameraDistanceAtY, cameraDistanceAtZ;
+        [SerializeField] private float movementSpeed, speedNormalizer, cameraDistanceAtY, cameraDistanceAtZ, fallDistance;
         [SerializeField] private int zero;
         [SerializeField] private WeaponService weaponService;
 
@@ -32,6 +32,11 @@ namespace SimpleShooty.Player
 
         private void Update()
         {
+            if(transform.position.y < fallDistance)
+            {
+                UIManager.Instance.GameOver();
+            }
+
             Movement();
 
             if (PlayerManager.Instance.IsEnemyThere)

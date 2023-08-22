@@ -9,6 +9,7 @@ namespace SimpleShooty.Weapon
     public class WeaponService : MonoBehaviour
     {
         [field: SerializeField] public BulletService BulletService { get; private set; }
+
         [SerializeField] private List<WeaponView> weaponPrefabs;
         [SerializeField] private List<WeaponScriptableObject> weaponScriptableObjectList;
 

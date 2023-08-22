@@ -12,11 +12,18 @@ namespace SimpleShooty.Player
         [field: SerializeField] public Transform MainCamera { get; private set; }
         [field: SerializeField] private PlayerController playerController;
 
-        [SerializeField] private int zero;
+        [SerializeField] private int zero, one;
 
         public GameObject EnemyGameObject { get; private set; }
         public bool IsEnemyThere { get; private set; }
         public int EnemyPriority { get; private set; }
+
+        protected new void Awake()
+        {
+            base.Awake();
+
+            Time.timeScale = one;
+        }
 
         public void SetEnemyInRange(GameObject gameObject, int priority)
         {

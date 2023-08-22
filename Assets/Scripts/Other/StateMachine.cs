@@ -8,11 +8,6 @@ namespace SimpleShooty.StateMachine
 
         public void SetState(BaseState newState)
         {
-            if(currentState != null)
-            {
-                currentState.OnStateExit();
-            }
-
             currentState = newState;
 
             if(currentState != null)

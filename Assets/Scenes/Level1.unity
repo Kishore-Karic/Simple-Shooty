@@ -137,7 +137,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &22322687
 Transform:
@@ -161,7 +161,7 @@ Transform:
   - {fileID: 1212465522}
   - {fileID: 543827461}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &49571607
 GameObject:
@@ -390,6 +390,10 @@ PrefabInstance:
     - target: {fileID: 2188436496473817356, guid: 22ac009acbc9d41eab7b17d04213de69, type: 3}
       propertyPath: m_Name
       value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188436496473817356, guid: 22ac009acbc9d41eab7b17d04213de69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6790360961447950464, guid: 22ac009acbc9d41eab7b17d04213de69, type: 3}
       propertyPath: m_RootOrder
@@ -650,6 +654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walkway2
       objectReference: {fileID: 0}
+    - target: {fileID: 6894000053406012019, guid: 32890cd61543c45328965676ddbcdce6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32890cd61543c45328965676ddbcdce6, type: 3}
 --- !u!4 &440055594 stripped
@@ -681,14 +689,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507928627}
-  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 2.7, z: -10.73}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 2.34, z: -10.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1335173534}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!20 &507928629
 Camera:
   m_ObjectHideFlags: 0
@@ -712,7 +720,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -15
+  near clip plane: -50
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -940,6 +948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walkway2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6894000053406012019, guid: 32890cd61543c45328965676ddbcdce6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32890cd61543c45328965676ddbcdce6, type: 3}
 --- !u!4 &538688264 stripped
@@ -961,7 +973,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &543827461
 Transform:
@@ -1019,6 +1031,10 @@ PrefabInstance:
     - target: {fileID: 3379873617176140761, guid: 3233b568ca3fa471a955fac33a75e5c3, type: 3}
       propertyPath: m_Name
       value: Octagon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379873617176140761, guid: 3233b568ca3fa471a955fac33a75e5c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4006483377665059589, guid: 3233b568ca3fa471a955fac33a75e5c3, type: 3}
       propertyPath: m_RootOrder
@@ -1103,7 +1119,7 @@ Transform:
   - {fileID: 1828223975}
   - {fileID: 1274741960}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &645927745
 MonoBehaviour:
@@ -1117,6 +1133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3766226fc017ac42b4ec0aacf867f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <VirtualJoyStickController>k__BackingField: {fileID: 1775818632}
   gameOverPanel: {fileID: 1798694238}
   gameWonPanel: {fileID: 828123088}
   restartButton: {fileID: 1745929268}
@@ -1124,7 +1141,6 @@ MonoBehaviour:
   menuButton: {fileID: 521771019}
   zero: 0
   one: 1
-  <VirtualJoyStickController>k__BackingField: {fileID: 1775818632}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,7 +1321,7 @@ Transform:
   - {fileID: 119219355}
   - {fileID: 90004939}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828123088
 GameObject:
@@ -1699,7 +1715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205149415448190665, guid: 0c93ea6a170adef4faff305d64ffb934, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3205149415448190665, guid: 0c93ea6a170adef4faff305d64ffb934, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1860,6 +1876,10 @@ PrefabInstance:
     - target: {fileID: 2188436496473817356, guid: 22ac009acbc9d41eab7b17d04213de69, type: 3}
       propertyPath: m_Name
       value: Block (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2188436496473817356, guid: 22ac009acbc9d41eab7b17d04213de69, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6790360961447950464, guid: 22ac009acbc9d41eab7b17d04213de69, type: 3}
       propertyPath: m_RootOrder
@@ -2086,6 +2106,7 @@ MonoBehaviour:
   <MainCamera>k__BackingField: {fileID: 507928628}
   playerController: {fileID: 2057483858486088080, guid: b43c301f41b7d814da875f7148029a0f, type: 3}
   zero: 0
+  one: 1
 --- !u!4 &1335173534
 Transform:
   m_ObjectHideFlags: 0
@@ -2101,7 +2122,7 @@ Transform:
   - {fileID: 507928628}
   - {fileID: 215507089}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372091813
 GameObject:
@@ -2188,6 +2209,14 @@ PrefabInstance:
     - target: {fileID: 1358490214140237847, guid: 2ec2f1ce4f834473dbcc9467e99d1483, type: 3}
       propertyPath: m_Name
       value: FinishArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358490214140237847, guid: 2ec2f1ce4f834473dbcc9467e99d1483, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852996695356678407, guid: 2ec2f1ce4f834473dbcc9467e99d1483, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ec2f1ce4f834473dbcc9467e99d1483, type: 3}
@@ -2490,7 +2519,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1745929266
 GameObject:
@@ -3066,6 +3095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Octagon
       objectReference: {fileID: 0}
+    - target: {fileID: 3379873617176140761, guid: 3233b568ca3fa471a955fac33a75e5c3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4006483377665059589, guid: 3233b568ca3fa471a955fac33a75e5c3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3263,6 +3296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Circle
       objectReference: {fileID: 0}
+    - target: {fileID: 786233247702653022, guid: 1ba537858bd974ef7965755d0e200d11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6915753473006891260, guid: 1ba537858bd974ef7965755d0e200d11, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3370,7 +3407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205149415448190665, guid: 0c93ea6a170adef4faff305d64ffb934, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3205149415448190665, guid: 0c93ea6a170adef4faff305d64ffb934, type: 3}
       propertyPath: m_LocalPosition.x

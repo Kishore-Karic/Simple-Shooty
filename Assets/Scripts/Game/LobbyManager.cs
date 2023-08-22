@@ -13,6 +13,8 @@ namespace SimpleShooty.Game
         {
             playButton.onClick.AddListener(PlayGame);
             quitButton.onClick.AddListener(QuitGame);
+
+            Time.timeScale = one;
         }
 
         private void PlayGame()

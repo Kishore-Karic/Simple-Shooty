@@ -353,8 +353,9 @@ MonoBehaviour:
   rigidBody: {fileID: 2057483858486088081}
   movementSpeed: 15
   speedNormalizer: 0.2
-  cameraDistanceAtY: 2.7
-  cameraDistanceAtZ: 7
+  cameraDistanceAtY: 2
+  cameraDistanceAtZ: 0
+  fallDistance: -5
   zero: 0
   weaponService: {fileID: 2057483858455915644}
 --- !u!1 &2057483858566161253

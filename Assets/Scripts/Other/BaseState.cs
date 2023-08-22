@@ -11,6 +11,5 @@
 
         public virtual void OnStateEnter() { }
         public virtual void OnUpdate() { }
-        public virtual void OnStateExit() { }
     }
 }

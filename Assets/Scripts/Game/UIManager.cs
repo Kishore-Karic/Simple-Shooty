@@ -8,10 +8,11 @@ namespace SimpleShooty.Game
 {
     public class UIManager : GenericSingleton<UIManager>
     {
+        [field: SerializeField] public VirtualJoyStickController VirtualJoyStickController { get; private set; }
+
         [SerializeField] private GameObject gameOverPanel, gameWonPanel;
         [SerializeField] private Button restartButton, replayButton, menuButton;
         [SerializeField] private int zero, one;
-        [field: SerializeField] public VirtualJoyStickController VirtualJoyStickController { get; private set; }
 
         protected new void Awake()
         {
