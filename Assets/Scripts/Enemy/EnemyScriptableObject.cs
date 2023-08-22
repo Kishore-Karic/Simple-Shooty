@@ -1,11 +1,13 @@
+using SimpleShooty.Enum;
 using UnityEngine;
 
 namespace SimpleShooty.Enemy
 {
-    [CreateAssetMenu(fileName = "NewEnemy", menuName = "CreateNewEnemy")]
+    [CreateAssetMenu(fileName = "NewEnemy", menuName = "ScriptableObjects/CreateNewEnemy")]
     public class EnemyScriptableObject : ScriptableObject
     {
-        public float MovementSpeed, ChaseRange, AttackRange;
+        public EnemyType EnemyType;
+        public float MovementSpeed, ChaseRange, AttackRange, PlayerRange;
         public int TotalHealth, Zero;
     }
 }

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ec4a5bba5616d419eec7852ff4b529, type: 3}
   m_Name: SlowEnemy
   m_EditorClassIdentifier: 
-  MovementSpeed: 1.5
-  ChaseRange: 15
+  EnemyType: 0
+  MovementSpeed: 2
+  ChaseRange: 20
   AttackRange: 1
+  PlayerRange: 15
   TotalHealth: 100
   Zero: 0

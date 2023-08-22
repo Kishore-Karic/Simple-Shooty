@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ec4a5bba5616d419eec7852ff4b529, type: 3}
-  m_Name: FastEnemy
+  m_Script: {fileID: 11500000, guid: fe1826c98b27a4d45b2c97597e2df96d, type: 3}
+  m_Name: PistolBullet
   m_EditorClassIdentifier: 
-  EnemyType: 1
-  MovementSpeed: 4
-  ChaseRange: 15
-  AttackRange: 1
-  PlayerRange: 20
-  TotalHealth: 50
-  Zero: 0
+  Damage: 35
+  MovementSpeed: 1000
+  DestroyTime: 4

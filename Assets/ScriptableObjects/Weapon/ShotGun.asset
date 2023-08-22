@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88ec4a5bba5616d419eec7852ff4b529, type: 3}
-  m_Name: FastEnemy
+  m_Script: {fileID: 11500000, guid: 1ed389c92bf21624ba9fbf66ebe9b95f, type: 3}
+  m_Name: ShotGun
   m_EditorClassIdentifier: 
-  EnemyType: 1
-  MovementSpeed: 4
-  ChaseRange: 15
-  AttackRange: 1
-  PlayerRange: 20
-  TotalHealth: 50
-  Zero: 0
+  WeaponType: 1
+  BulletType: 1
+  NextShootTime: 2
