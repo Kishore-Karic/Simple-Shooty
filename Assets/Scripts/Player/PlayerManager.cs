@@ -1,4 +1,5 @@
 using SimpleShooty.Enum;
+using SimpleShooty.Game;
 using SimpleShooty.GenericSingleton;
 using UnityEngine;
 
@@ -8,8 +9,10 @@ namespace SimpleShooty.Player
     {
         [field: SerializeField] public Transform PlayerTransform { get; private set; }
         [field: SerializeField] public WeaponType WeaponType { get; private set; }
+        [field: SerializeField] public Transform MainCamera { get; private set; }
+        [field: SerializeField] private PlayerController playerController;
+
         [SerializeField] private int zero;
-        [SerializeField] private PlayerController playerController;
 
         public GameObject EnemyGameObject { get; private set; }
         public bool IsEnemyThere { get; private set; }
@@ -22,7 +25,6 @@ namespace SimpleShooty.Player
                 EnemyGameObject = gameObject;
                 IsEnemyThere = true;
                 EnemyPriority = priority;
-                Debug.Log("Enumy is there " + gameObject.name + " prio " + EnemyPriority);
             }
         }
 
@@ -33,13 +35,12 @@ namespace SimpleShooty.Player
                 EnemyGameObject = null;
                 IsEnemyThere = false;
                 EnemyPriority = zero;
-                Debug.Log("Enemy is not there " + gameObject.name + " prio " + EnemyPriority);
             }
         }
 
         public void PlayerDead()
         {
-            Debug.Log("Player Dead");
+            UIManager.Instance.GameOver();
         }
 
         public void EnemyDestroyed(GameObject gameObject)

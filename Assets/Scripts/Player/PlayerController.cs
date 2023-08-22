@@ -1,4 +1,5 @@
 using SimpleShooty.Enum;
+using SimpleShooty.Game;
 using SimpleShooty.Weapon;
 using UnityEngine;
 
@@ -10,16 +11,19 @@ namespace SimpleShooty.Player
         [SerializeField] private Rigidbody rigidBody;
         [SerializeField] private float movementSpeed, speedNormalizer, cameraDistanceAtY, cameraDistanceAtZ;
         [SerializeField] private int zero;
-        [SerializeField] private VirtualJoyStickController virtualJoyStickController;
         [SerializeField] private WeaponService weaponService;
-        [SerializeField] private Transform mainCamera;
 
+        private Transform mainCamera;
+        private VirtualJoyStickController virtualJoyStickController;
         private float moveXAxis, moveZAxis, currentTime, nextShootTime;
         private int horizontalVal, verticalVal;
         private WeaponView weaponView;
 
         private void Start()
         {
+            virtualJoyStickController = UIManager.Instance.VirtualJoyStickController;
+            mainCamera = PlayerManager.Instance.MainCamera;
+
             horizontalVal = Animator.StringToHash("Horizontal");
             verticalVal = Animator.StringToHash("Vertical");
 
@@ -32,8 +36,8 @@ namespace SimpleShooty.Player
 
             if (PlayerManager.Instance.IsEnemyThere)
             {
-                transform.LookAt(PlayerManager.Instance.EnemyGameObject.transform);
-
+                transform.LookAt(PlayerManager.Instance.EnemyGameObject.transform.position);
+                animator.SetBool("Aim", true);
                 currentTime += Time.deltaTime;
                 if(currentTime > nextShootTime && weaponView)
                 {
@@ -44,6 +48,7 @@ namespace SimpleShooty.Player
             else
             {
                 transform.rotation = Quaternion.identity;
+                animator.SetBool("Aim", false);
             }
         }
 
@@ -94,6 +99,14 @@ namespace SimpleShooty.Player
         public void NewWeaponPickedUp(WeaponType weaponType)
         {
             weaponService.CreateNewWeapon(weaponType);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("FinishArea"))
+            {
+                UIManager.Instance.GameWon();
+            }
         }
     }
 }

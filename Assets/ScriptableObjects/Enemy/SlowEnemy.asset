@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SlowEnemy
   m_EditorClassIdentifier: 
   EnemyType: 0
-  MovementSpeed: 2
+  MovementSpeed: 1
   ChaseRange: 20
   AttackRange: 1
-  PlayerRange: 15
+  PlayerRange: 20
   TotalHealth: 100
   Zero: 0

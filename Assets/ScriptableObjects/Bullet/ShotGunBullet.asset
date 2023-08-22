@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ShotGunBullet
   m_EditorClassIdentifier: 
   Damage: 80
-  MovementSpeed: 1000
+  MovementSpeed: 2000
   DestroyTime: 4

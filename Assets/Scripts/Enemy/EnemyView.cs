@@ -12,6 +12,7 @@ namespace SimpleShooty.Enemy
         [field: SerializeField] public NavMeshAgent NaveMeshAgent { get; private set; }
         [field: SerializeField] public Animator Animator { get; private set; }
         [field: SerializeField] public Rigidbody Rigidbody { get; private set; }
+        [field: SerializeField] public EnemyHealthUI EnemyHealthUI { get; private set; }
 
         private EnemyController enemyController;
         private bool IsSetToPlayer;
@@ -19,7 +20,6 @@ namespace SimpleShooty.Enemy
         public void SetEnemyController(EnemyController _enemyController)
         {
             enemyController = _enemyController;
-            Debug.Log(gameObject.name + " " + (int)enemyController.GetEnemyType() + " " + enemyController.GetEnemyType());
         }
 
         private void Update()

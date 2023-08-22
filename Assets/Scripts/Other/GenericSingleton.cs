@@ -11,11 +11,6 @@ namespace SimpleShooty.GenericSingleton
             if(Instance == null)
             {
                 Instance = (T)this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
             }
         }
     }

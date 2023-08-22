@@ -59,13 +59,13 @@ namespace SimpleShooty.Enemy
         public void TakeDamage(int damage)
         {
             enemyModel.SetCurrentHealth(enemyModel.CurrentHealth - damage);
+            enemyView.EnemyHealthUI.SetHealthUI(enemyModel.TotalHealth - enemyModel.CurrentHealth);
 
             if(enemyModel.CurrentHealth <= enemyModel.Zero)
             {
                 PlayerManager.Instance.EnemyDestroyed(enemyView.gameObject);
                 enemyView.DestroyObject();
             }
-
         }
     }
 }

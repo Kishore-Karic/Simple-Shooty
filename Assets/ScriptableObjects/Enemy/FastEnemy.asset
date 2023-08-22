@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: FastEnemy
   m_EditorClassIdentifier: 
   EnemyType: 1
-  MovementSpeed: 4
+  MovementSpeed: 3
   ChaseRange: 15
   AttackRange: 1
-  PlayerRange: 20
+  PlayerRange: 10
   TotalHealth: 50
   Zero: 0
