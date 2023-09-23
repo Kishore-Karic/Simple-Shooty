@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MachineGunBullet
   m_EditorClassIdentifier: 
   Damage: 35
-  MovementSpeed: 1500
+  MovementSpeed: 1300
   DestroyTime: 4

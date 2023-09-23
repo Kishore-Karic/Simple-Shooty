@@ -5,7 +5,10 @@ namespace SimpleShooty.Bullet
 {
     public class BulletView : MonoBehaviour
     {
+        [SerializeField] private int zero;
         [field: SerializeField] public Rigidbody RigidBody { get; private set; }
+
+        public BulletPoolService BulletPoolService;
 
         private BulletController bulletController;
         private float currentTime;
@@ -22,13 +25,15 @@ namespace SimpleShooty.Bullet
         public void SetBulletController(BulletController _bulletController)
         {
             bulletController = _bulletController;
+            currentTime = zero;
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.GetComponent<IDamageable>() != null)
+            IDamageable damageableObject = other.GetComponent<IDamageable>();
+            if(damageableObject != null)
             {
-                other.GetComponent<IDamageable>().Damage(bulletController.GetDamageValue());
+                damageableObject.Damage(bulletController.GetDamageValue());
             }
 
             DestroyObject();
@@ -36,7 +41,8 @@ namespace SimpleShooty.Bullet
 
         private void DestroyObject()
         {
-            Destroy(gameObject);
+            RigidBody.velocity = Vector3.zero;
+            BulletPoolService.ReturnItem(this);
         }
     }
 }

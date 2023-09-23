@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1003058527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1003058529}
+  - component: {fileID: 1003058528}
+  m_Layer: 0
+  m_Name: BulletPoolService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1003058529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003058527}
+  m_LocalRotation: {x: -0.70702153, y: 0.0061135115, z: -0.016397994, w: -0.70697546}
+  m_LocalPosition: {x: -9.347952, y: -8.764292, z: 1.9466182}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2057483858455915643}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1003058528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003058527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d31595f32c2a54b8a6e9d8193efe94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 5
+  zero: 0
+  bulletView: {fileID: 4250929987475676536, guid: e893d7aded9904b2fac62f3139861807, type: 3}
 --- !u!1 &2057483858152196744
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +274,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2057483859366543309}
+  - {fileID: 1003058529}
   m_Father: {fileID: 2057483858871026251}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1721,11 +1769,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccfb224a0462bb24cb26634559674ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4250929987475676536, guid: e893d7aded9904b2fac62f3139861807, type: 3}
   bulletScriptableObjectList:
   - {fileID: 11400000, guid: 1242380b98c35114f9d95e8d8c57d5e0, type: 2}
   - {fileID: 11400000, guid: 81a4b718d3feb69459b7afa8e03c0d5b, type: 2}
   - {fileID: 11400000, guid: ab8a18a4930dca645aeab01701d15fb1, type: 2}
+  bulletPoolService: {fileID: 1003058528}
 --- !u!1 &2057483859432088212
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,11 +10,13 @@ namespace SimpleShooty.Bullet
         public BulletController(BulletModel _bulletModel, BulletView _bulletView, Transform spawnPoint, Quaternion spwanRotation)
         {
             bulletModel = _bulletModel;
-            bulletView = GameObject.Instantiate(_bulletView);
+            bulletView = _bulletView;
 
             bulletView.SetBulletController(this);
+
             bulletView.transform.position = spawnPoint.position;
             bulletView.transform.rotation = spwanRotation;
+            bulletView.gameObject.SetActive(true);
 
             FireBullet();
         }

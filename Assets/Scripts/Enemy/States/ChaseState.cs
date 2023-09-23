@@ -11,7 +11,7 @@ namespace SimpleShooty.StateMachine.Enemy
 
         public override void OnStateEnter()
         {
-            enemyStateMachine.Animator.SetBool("Idle", true);
+            enemyStateMachine.Animator.SetBool("Idle", false);
             enemyStateMachine.NavMeshAgent.isStopped = false;
         }
 

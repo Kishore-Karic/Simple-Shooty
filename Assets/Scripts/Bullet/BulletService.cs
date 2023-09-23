@@ -6,12 +6,12 @@ namespace SimpleShooty.Bullet
 {
     public class BulletService : MonoBehaviour
     {
-        [SerializeField] private BulletView bulletPrefab;
         [SerializeField] private List<BulletScriptableObject> bulletScriptableObjectList;
+        [SerializeField] private BulletPoolService bulletPoolService;
 
         public void SpawnBullet(BulletType bulletType, Transform spawnPoint, Quaternion spawnRotation)
         {
-            new BulletController(new BulletModel(bulletScriptableObjectList[(int)bulletType]), bulletPrefab, spawnPoint, spawnRotation);
+            new BulletController(new BulletModel(bulletScriptableObjectList[(int)bulletType]), bulletPoolService.GetItem(), spawnPoint, spawnRotation);
         }
     }
 }
